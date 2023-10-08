@@ -29,7 +29,7 @@ let fromFile (filename : string) =
         failwithf $"%s{exn.Message} in file %s{filename} near line %d{pos.Line+1}, column %d{pos.Column}\n"
 
 let expr = fromString """
-let x = 5 in x end
+let x = 5
 """
 
 printfn $"{exp}"

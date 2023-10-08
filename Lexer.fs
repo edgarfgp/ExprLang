@@ -19,8 +19,6 @@ let lexemeAsString lexbuf =
 let keyword s =
     match s with
     | "let" -> LET
-    | "in"  -> IN
-    | "end" -> END
     | _     -> NAME s
 
 # 26 "Lexer.fs"

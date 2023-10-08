@@ -2,11 +2,9 @@
 module Parser
 type token = 
   | EOF
+  | LET
   | LPAR
   | RPAR
-  | END
-  | IN
-  | LET
   | PLUS
   | MINUS
   | TIMES
@@ -16,11 +14,9 @@ type token =
   | CSTINT of (int)
 type tokenId = 
     | TOKEN_EOF
+    | TOKEN_LET
     | TOKEN_LPAR
     | TOKEN_RPAR
-    | TOKEN_END
-    | TOKEN_IN
-    | TOKEN_LET
     | TOKEN_PLUS
     | TOKEN_MINUS
     | TOKEN_TIMES

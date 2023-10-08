@@ -1,11 +1,11 @@
 {
-(* File Expr/lexer.fsl
+(* File Expr/Lexer.fsl
    Lexer specification for the simple expression language.
 *)
 
 
-open Microsoft.FSharp.Text.Lexing
-open ExprPar
+open FSharp.Text.Lexing
+open Parser
 
 let lexemeAsString lexbuf = 
     LexBuffer<char>.LexemeString lexbuf
@@ -16,8 +16,6 @@ let lexemeAsString lexbuf =
 let keyword s =
     match s with
     | "let" -> LET
-    | "in"  -> IN
-    | "end" -> END
     | _     -> NAME s
 }
 
